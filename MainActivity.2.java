@@ -1,57 +1,80 @@
-package com.example.registrationformapp;
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="498dp"
+        android:layout_height="92dp"
+        android:width="200dp"
+        android:height="80dp"
+        android:gravity="center"
+        android:hint="imię: "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="504dp"
+        android:layout_height="85dp"
+        android:width="200dp"
+        android:height="80dp"
+        android:gravity="center"
+        android:hint="email: "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="454dp"
+        android:layout_height="83dp"
+        android:width="200dp"
+        android:height="80dp"
+        android:gravity="center"
+        android:hint="hasło: "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/password1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="465dp"
+        android:layout_height="90dp"
+        android:width="200dp"
+        android:height="80dp"
+        android:gravity="center"
+        android:hint="Powtórz hasło: "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
 
-import android.os.Bundle;
-
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
-
-    EditText editTextName;
-    EditText editTextEmail;
-    EditText editTextPassword;
-    EditText editTextPassword2;
-    Button Submit;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
-
-        editTextName = findViewById(R.id.name);
-        editTextEmail = findViewById(R.id.email);
-        editTextPassword = findViewById(R.id.password);
-        editTextPassword2 = findViewById(R.id.password2);
-
-        Submit = findViewById(R.id.submit);
-        Submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = editTextName.getText().toString().trim();
-                String email = editTextEmail.getText().toString().trim();
-                String password = editTextPassword.getText().toString().trim();
-                String password2 = editTextPassword2.getText().toString().trim();
-
-                if (name.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Proszę wprowadzić imię", Toast.LENGTH_SHORT).show();
-                } else if (email.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Proszę wprowadzić adres email", Toast.LENGTH_SHORT).show();
-                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    Toast.makeText(MainActivity.this, "Niepoprawny adres email", Toast.LENGTH_SHORT).show();
-                } else if (password.length() < 6) {
-                    Toast.makeText(MainActivity.this, "Podane hasło jest za krótkie", Toast.LENGTH_SHORT).show();
-                } else if (!password.equals(password2)) {
-                    Toast.makeText(MainActivity.this, "Podane hasła są różne", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Formularz przesłany poprawnie", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-}
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+    <Button
+        android:id="@+id/submit"
+        android:text="Submit"
+        android:width="200dp"
+        android:height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
