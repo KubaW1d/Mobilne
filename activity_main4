@@ -5,14 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#F5F5DC">
+    android:background="#F5F5DC"
+    android:orientation="vertical">
 
 
     <TextView
+        android:id="@+id/pole1"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
+        android:width="180dp"
+        android:height="80dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:text="?"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/pole2"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
+        android:width="180dp"
+        android:height="80dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:text="?"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/pole3"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
+        android:width="180dp"
+        android:height="80dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:text="?"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
         android:id="@+id/name"
-        android:layout_width="383dp"
-        android:layout_height="50dp"
+        android:layout_width="389dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="#A52A2A"
         android:gravity="center"
@@ -23,111 +71,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/pole4"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        android:width="180dp"
+        android:height="80dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:text="?"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/pole5"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
+        android:width="180dp"
+        android:height="80dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:text="?"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="150dp" />
+
     <Button
         android:id="@+id/rzut"
-        android:layout_width="380dp"
-        android:layout_height="55dp"
+        android:layout_width="388dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:width="200dp"
-        android:height="80dp"
         android:background="#D2691E"
         android:text="RZUĆ KOŚCIAMI"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
-        android:id="@+id/pole1"
-        android:layout_width="70dp"
-        android:layout_height="58dp"
-        android:width="180dp"
-        android:height="80dp"
-        android:gravity="center_horizontal"
-        android:hint="?"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <TextView
-        android:id="@+id/pole1"
-        android:layout_width="70dp"
-        android:layout_height="58dp"
-        android:width="180dp"
-        android:height="80dp"
-        android:gravity="center_horizontal"
-        android:hint="?"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <TextView
-        android:id="@+id/pole1"
-        android:layout_width="70dp"
-        android:layout_height="58dp"
-        android:width="180dp"
-        android:height="80dp"
-        android:gravity="center_horizontal"
-        android:hint="?"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <TextView
-        android:id="@+id/pole1"
-        android:layout_width="70dp"
-        android:layout_height="58dp"
-        android:width="180dp"
-        android:height="80dp"
-        android:gravity="center_horizontal"
-        android:hint="?"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="337dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <TextView
-        android:id="@+id/pole1"
-        android:layout_width="70dp"
-        android:layout_height="58dp"
-        android:width="180dp"
-        android:height="80dp"
-        android:gravity="center_horizontal"
-        android:hint="?"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wynik tego losowania: "
+        android:text="Wynik tego losowania: 0"
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="215dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wynik gry: "
+        android:text="Wynik gry: 0"
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="235dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Liczba rzutów: "
+        android:text="Liczba rzutów: 0 "
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="255dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="387dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="148dp"
+        android:background="#A52A2A"
+        android:text="RESETUJ WYNIK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rzut" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
